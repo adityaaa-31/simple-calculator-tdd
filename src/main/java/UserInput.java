@@ -7,4 +7,7 @@ public class UserInput {
         this.scanner = scanner;
     }
 
+    public Integer getInput() {
+        return scanner.nextInt();
+    }
 }
