@@ -11,7 +11,7 @@ public class CalcuatorTest {
         int num1 = 10;
         int num2 = 20;
 
-        assertEquals(num1 + num2, calulator.sum());
+        assertEquals(num1 + num2, calculator.sum());
     }
 
 }
