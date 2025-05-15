@@ -7,4 +7,8 @@ public class Calculator {
         this.num2 = num2;
     }
 
+    public int sum() {
+        return num1 + num2;
+    }
+
 }
