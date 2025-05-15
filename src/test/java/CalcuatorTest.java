@@ -1,8 +1,15 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class CalcuatorTest {
+
+    @Test
+    public void checkValidCalculator() {
+        Calculator calculator = new Calculator();
+        assertNotNull(calculator);
+    }
 
     @Test
     public void givenTwoDigitsCalculateSum() {
