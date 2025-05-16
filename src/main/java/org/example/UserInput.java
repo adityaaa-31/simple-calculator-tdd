@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.Scanner;
 
 public class UserInput {
@@ -7,7 +9,9 @@ public class UserInput {
         this.scanner = scanner;
     }
 
-    public Integer getInput() {
-        return scanner.nextInt();
+    public String getInput() {
+        System.out.println("Enter your operation");
+        return scanner.nextLine();
     }
+
 }
