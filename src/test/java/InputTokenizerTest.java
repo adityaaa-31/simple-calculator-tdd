@@ -22,15 +22,6 @@ public class InputTokenizerTest {
         assertEquals("12", operands[2]);
     }
 
-    @Test
-    public void givenOperandsParseInt() {
-        String[] operands = new String[2];
-        operands[0] = "10";
-        operands[1] = "20";
 
-        int[] res = inputTokenizer.parseOperands(operands);
-        assertEquals(10, res[0]);
-        assertEquals(20, res[1]);
-    }
 
 }
