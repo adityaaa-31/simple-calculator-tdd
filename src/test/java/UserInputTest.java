@@ -25,4 +25,11 @@ public class UserInputTest {
         String res = userInput.getInput();
         assertNotNull(res);
     }
+
+    @Test
+    public void givenInputCheckInputIsString() {
+        when(scanner.nextLine()).thenReturn("10 + 12");
+        String res = userInput.getInput();
+        assertInstanceOf(String.class, res);
+    }
 }
