@@ -14,4 +14,12 @@ public class InputTokenizerTest {
         assertEquals("+", operator[1]);
     }
 
+    @Test
+    public void givenInputStringCheckValidOperands() {
+        String input = "10 + 12";
+        String[] operands = inputTokenizer.getTokens(input);
+        assertEquals("10", operands[0]);
+        assertEquals("12", operands[2]);
+    }
+
 }
