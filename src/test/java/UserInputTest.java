@@ -1,3 +1,4 @@
+import org.example.UserInput;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -6,7 +7,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Scanner;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -19,9 +20,9 @@ public class UserInputTest {
     private Scanner scanner;
 
     @Test
-    public void givenIntegerInputCheckIsNotNull() {
-        when(scanner.nextInt()).thenReturn(10);
-        Integer res = userInput.getInput();
+    public void givenInputCheckInputNotNull() {
+        when(scanner.nextLine()).thenReturn("10 + 12");
+        String res = userInput.getInput();
         assertNotNull(res);
     }
 }
