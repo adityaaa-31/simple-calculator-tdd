@@ -28,4 +28,17 @@ public class TokenParserTest {
             tokenParser.parseOperands(operands);
         });
     }
+
+    @Test
+    public void givenInputParseSumOperator() {
+        String[] tokens = new String[3];
+
+        tokens[0] = "10";
+        tokens[1] = "+";
+        tokens[2] = "20";
+
+        String res = tokenParser.parseOperator(tokens);
+        assertEquals("+", res);
+    }
+
 }
