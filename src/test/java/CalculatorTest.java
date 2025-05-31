@@ -6,16 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTest {
 
-    static Scanner scanner = new Scanner(System.in);
-    static UserInput userInput = new UserInput(scanner);
-    static TokenParser tokenParser = new TokenParser();
-    static InputTokenizer inputTokenizer = new InputTokenizer();
-
-    private final Calculator calculator;
-
-    public CalculatorTest() {
-        calculator = new Calculator(userInput, tokenParser,inputTokenizer);
-    }
+    private final Calculator calculator = new Calculator();
 
     public void givenSumOperationTypeReturnSum() {
         int num1 = 10;
