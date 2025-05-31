@@ -1,24 +1,26 @@
-import org.junit.jupiter.api.Test;
+import org.example.*;
+
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class CalculatorTest {
 
-    @Test
-    public void checkValidCalculator() {
-        Calculator calculator = new Calculator();
-        assertNotNull(calculator);
+    static Scanner scanner = new Scanner(System.in);
+    static UserInput userInput = new UserInput(scanner);
+    static TokenParser tokenParser = new TokenParser();
+    static InputTokenizer inputTokenizer = new InputTokenizer();
+
+    private final Calculator calculator;
+
+    public CalculatorTest() {
+        calculator = new Calculator(userInput, tokenParser,inputTokenizer);
     }
 
-    @Test
-    public void givenTwoDigitsCalculateSum() {
-        Calculator calculator = new Calculator(10, 20);
-
-        int num1 = 10;
-        int num2 = 20;
-
-        assertEquals(num1 + num2, calculator.sum());
+    public void givenSumOperationTypeReturnSum() {
+        String input = "10 + 20";
+        int res = calculator.calculate(input);
+        assertEquals(20, res);
     }
 
 }
