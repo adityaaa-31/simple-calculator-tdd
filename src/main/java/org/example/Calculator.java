@@ -1,14 +1,18 @@
+package org.example;
+
+import java.util.Map;
+
 public class Calculator {
+    private final Map<OperationType, Operation> operationMap;
 
-    public int getSum(int num1, int num2) {
-        return num1 + num2;
+    public Calculator() {
+        operationMap = Map.of(
+                OperationType.SUM, new Sum()
+        );
     }
 
-    public int getDifference(int num1, int num2) {
-        return num1 - num2;
-    }
-
-    public int getProduct(int num1, int num2) {
-        return num1 * num2;
+    public int calculate(OperationType operationType, int num1, int  num2) {
+        Operation operation = operationMap.get(operationType);
+        return operation.perform(num1, num2);
     }
 }
