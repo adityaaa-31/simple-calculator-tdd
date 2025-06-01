@@ -11,4 +11,9 @@ public class OperationTypeTest {
         assertEquals(OperationType.SUM, OperationType.fromSymbol("+"));
     }
 
+    @Test
+    public void givenMinusSymbol_shouldReturnDifferenceEnum() {
+        assertEquals(OperationType.DIFFERENCE, OperationType.fromSymbol("-"));
+    }
+
 }
