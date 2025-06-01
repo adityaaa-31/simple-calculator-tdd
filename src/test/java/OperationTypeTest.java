@@ -21,4 +21,12 @@ public class OperationTypeTest {
         assertEquals(OperationType.PRODUCT, OperationType.fromSymbol("*"));
     }
 
+    @Test
+    public void givenInvalidSymbol_shouldThrowException() {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> OperationType.fromSymbol("}")
+        );
+        assertEquals("Invalid Operator", exception.getMessage());
+    }
 }
