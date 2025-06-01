@@ -16,4 +16,9 @@ public class OperationTypeTest {
         assertEquals(OperationType.DIFFERENCE, OperationType.fromSymbol("-"));
     }
 
+    @Test
+    public void givenMultiplySymbol_shouldReturnProductEnum() {
+        assertEquals(OperationType.PRODUCT, OperationType.fromSymbol("*"));
+    }
+
 }
