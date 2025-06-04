@@ -9,11 +9,13 @@ public class TokenParserTest {
 
     @Test
     public void givenOperandsParseInt() {
-        String[] operands = new String[2];
-        operands[0] = "10";
-        operands[1] = "20";
+        String[] tokens = new String[3];
 
-        int[] res = tokenParser.parseOperands(operands);
+        tokens[0] = "10";
+        tokens[1] = "+";
+        tokens[2] = "20";
+
+        int[] res = tokenParser.parseOperands(tokens);
         assertEquals(10, res[0]);
         assertEquals(20, res[1]);
     }
