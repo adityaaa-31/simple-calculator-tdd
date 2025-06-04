@@ -1,11 +1,11 @@
 package org.example;
 
 public class TokenParser {
-    public int[] parseOperands(String[] operands) {
+    public int[] parseOperands(String[] tokens) {
         int[] convertedOperands = new int[2];
 
-        convertedOperands[0] = Integer.parseInt(operands[0]);
-        convertedOperands[1] = Integer.parseInt(operands[1]);
+        convertedOperands[0] = Integer.parseInt(tokens[0].trim());
+        convertedOperands[1] = Integer.parseInt(tokens[2].trim());
 
         return convertedOperands;
     }
